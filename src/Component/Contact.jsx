@@ -1,17 +1,30 @@
+import React, { useEffect } from "react";
 import { MdAddCall, MdOutlineMail } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
 import img1 from "../assets/download (4).png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS with a duration of 1 second
+  }, []);
+
   return (
     <div id="contact" className="py-20 bg-white">
-      <h1 className="text-center text-3xl font-bold text-gray-400 mb-10">
+      <h1
+        className="text-center text-3xl font-bold text-gray-400 mb-10"
+        data-aos="fade-up"
+      >
         ℂ𝕠𝕟𝕥𝕒𝕔𝕥 𝕎𝕚𝕥𝕙 𝕄𝕖
       </h1>
 
       <div className="max-w-[1200px] w-full mx-auto grid lg:grid-cols-2 gap-8 px-4 lg:px-6">
         {/* Left-side (Contact Info) */}
-        <div className="flex flex-col items-center lg:items-start">
+        <div
+          className="flex flex-col items-center lg:items-start"
+          data-aos="fade-right"
+        >
           <div>
             <img
               className="rounded-full w-32 h-32 sm:w-40 sm:h-40 object-cover mb-6"
@@ -58,7 +71,10 @@ const Contact = () => {
         </div>
 
         {/* Right side (Contact Form) */}
-        <div className="flex justify-center lg:justify-start">
+        <div
+          className="flex justify-center lg:justify-start"
+          data-aos="fade-left"
+        >
           <div className="w-full max-w-[470px] bg-white rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
               Contact Form

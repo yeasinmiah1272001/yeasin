@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { RiSingleQuotesL } from "react-icons/ri";
 import img1 from "../assets/img.jpg";
 import img2 from "../assets/p.png";
 import img3 from "../assets/po.png";
 import certificate from "../../public/certificate.pdf";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 const Education = () => {
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <div id="education" className="py-16 bg-[#EFEEFC]">
       <h1 className="text-center text-2xl md:text-3xl font-bold text-gray-600 mb-8 md:mb-12">
@@ -16,6 +23,7 @@ const Education = () => {
         <div
           className="relative w-full p-6 md:p-8 bg-white shadow-lg rounded-[40px] flex flex-col items-center border-2 border-transparent transition-all duration-300 hover:shadow-xl hover:border-btnColor"
           style={{ borderRadius: "0% 100% 1% 99% / 79% 3% 97% 21%" }}
+          data-aos="fade-up" // AOS animation
         >
           <img
             className="mt-4 h-20 w-20 sm:h-24 sm:w-24 rounded-full shadow-md object-cover"
@@ -48,6 +56,7 @@ const Education = () => {
         <div
           className="relative w-full p-6 md:p-8 bg-white shadow-lg rounded-[40px] flex flex-col items-center border-2 border-transparent transition-all duration-300 hover:shadow-xl hover:border-btnColor"
           style={{ borderRadius: "0% 100% 1% 99% / 79% 3% 97% 21%" }}
+          data-aos="fade-up" // AOS animation
         >
           <img
             className="mt-4 h-20 w-20 sm:h-24 sm:w-24 rounded-full shadow-md object-cover"
@@ -80,6 +89,7 @@ const Education = () => {
         <div
           className="relative w-full p-6 md:p-8 bg-white shadow-lg rounded-[40px] flex flex-col items-center border-2 border-transparent transition-all duration-300 hover:shadow-xl hover:border-btnColor"
           style={{ borderRadius: "0% 100% 1% 99% / 79% 3% 97% 21%" }}
+          data-aos="fade-up" // AOS animation
         >
           <img
             className="mt-4 h-20 w-20 sm:h-24 sm:w-24 rounded-full shadow-md object-cover"
