@@ -52,7 +52,7 @@ const Project = () => {
               key={index}
               className="flex flex-col w-full border p-5 shadow-2xl rounded-lg transition duration-500 h-full"
             >
-              <div className="overflow-hidden rounded-t-lg h-60 group">
+              <div className="overflow-hidden relative rounded-t-lg h-60 group">
                 <motion.img
                   src={project.img}
                   alt={project.title}
