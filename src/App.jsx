@@ -12,10 +12,12 @@ import Contact from "./Component/Contact";
 import Project from "./Component/Project";
 import Skill from "./Component/Skill";
 import Education from "./Component/Education";
+import Design from "./Component/Design/Design";
 
 const App = () => {
   return (
     <div id="home" className=" font-bodyFont overflow-hidden">
+      <Design />
       <Banner />
       <UiSection />
       <About />
