@@ -6,8 +6,7 @@ import Counter from "./Component/Counter";
 
 import Footer from "./Component/Footer";
 import Portfolio from "./Component/Portfolio";
-import Spoty from "./Component/Spoty";
-import Blog from "./Component/Blog";
+
 import Contact from "./Component/Contact";
 import Project from "./Component/Project";
 import Skill from "./Component/Skill";
