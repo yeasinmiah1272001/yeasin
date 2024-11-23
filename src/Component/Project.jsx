@@ -52,7 +52,7 @@ const Project = () => {
               key={index}
               className="flex flex-col w-full border p-5 shadow-2xl rounded-lg transition duration-500 h-full"
             >
-              <div className="overflow-hidden relative rounded-t-lg h-60 group">
+              <div className="overflow-hidden  rounded-t-lg h-60 group">
                 <motion.img
                   src={project.img}
                   alt={project.title}
@@ -61,10 +61,9 @@ const Project = () => {
                   whileHover={{ y: -80 }}
                   transition={{ duration: 1 }}
                 />
-                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
               </div>
               <div className="flex-grow mt-4">
-                <h3 className="text-lg font-bold text-white mb-2">
+                <h3 className="text-sm font-bold text-black mb-2">
                   {project.title}
                 </h3>
                 <ul className="flex text-start flex-wrap text-xs font-medium">

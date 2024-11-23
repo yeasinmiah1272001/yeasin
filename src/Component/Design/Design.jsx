@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Particles from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim"; // Ensure you have this installed via npm
+import { loadSlim } from "@tsparticles/slim";
 
 const Design = () => {
   const [init, setInit] = useState(false);
@@ -23,70 +23,68 @@ const Design = () => {
 
   const options = useMemo(
     () => ({
-      fpsLimit: 120,
+      fpsLimit: 60,
       interactivity: {
         events: {
-          onClick: {
-            enable: true,
-            mode: "push",
-          },
           onHover: {
             enable: true,
-            mode: "repulse",
-          },
-          resize: {
-            delay: 0.5,
-            enable: true,
+            mode: "attract", // Particles attract towards the cursor
           },
         },
         modes: {
-          push: {
-            quantity: 4,
-          },
-          repulse: {
-            distance: 400,
-            duration: 0.4,
+          attract: {
+            distance: 200, // Attraction range
+            duration: 0.4, // Smooth movement towards the cursor
+            factor: 3, // Strength of attraction
           },
         },
       },
       particles: {
         color: {
-          value: "#FEC576", // Particle color
+          value: ["#ff7f50", "#87ceeb", "#ffa07a"], // Gradient-inspired colors (coral, sky blue, light salmon)
         },
         links: {
-          color: "#FEC576", // Link color
-          distance: 100,
-          enable: true,
-          opacity: 0.5,
-          width: 1,
+          enable: false, // No linking lines for a cleaner look
         },
         move: {
-          direction: "none",
           enable: true,
+          speed: 1.5, // Smooth motion
           outModes: {
-            default: "bounce",
+            default: "bounce", // Bounce back when hitting the edges
           },
-          random: false,
-          speed: 5,
-          straight: false,
+          random: true, // Adds organic movement
         },
         number: {
           density: {
             enable: true,
+            area: 1000, // Spaced-out particles
           },
-          value: 80, // Number of particles
+          value: 100, // Moderate number of particles
         },
         opacity: {
-          value: 0.5,
+          value: { min: 0.3, max: 0.8 }, // Adds a soft glow effect
+          animation: {
+            enable: true,
+            speed: 1,
+            minimumValue: 0.3,
+          },
         },
         shape: {
-          type: "circle", // Shape of particles
+          type: "circle", // Circular particles
         },
         size: {
-          value: { min: 1, max: 2 }, // Particle size range
+          value: { min: 2, max: 5 }, // Particle size range
+          animation: {
+            enable: true,
+            speed: 2,
+            minimumValue: 1,
+          },
         },
       },
       detectRetina: true,
+      // background: {
+      //   color: "#141414", // Deep black-gray for a modern look
+      // },
     }),
     []
   );
