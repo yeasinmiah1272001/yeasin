@@ -56,7 +56,7 @@ const Skill = () => {
             }`}
           >
             <div className="text-2xl mt-5 space-y-2 font-semibold mb-2 flex flex-col justify-center items-center">
-              <span className="text-gray-500">
+              <span className="text-blue-600">
                 {<service.icon size={70} />}
               </span>
               <h1 className="mt-2 text-2xl">{service.title}</h1>
