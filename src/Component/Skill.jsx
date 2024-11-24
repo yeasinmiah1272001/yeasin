@@ -6,9 +6,9 @@ import {
   FaReact,
   FaNodeJs,
 } from "react-icons/fa";
-import { SiNextdotjs } from "react-icons/si";
-import { SiRedux } from "react-icons/si";
 import {
+  SiNextdotjs,
+  SiRedux,
   SiTailwindcss,
   SiFirebase,
   SiMongodb,
@@ -39,6 +39,14 @@ const Skill = () => {
     { icon: SiMongodb, title: "MongoDB", description: 50 },
   ];
 
+  // Initialize AOS on component mount
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Animation happens only once
+    });
+  }, []);
+
   return (
     <div id="skill" className="bg-white py-10 lg:mx-20">
       <h1 className="text-center text-3xl font-bold text-gray-400 mb-8">
@@ -51,7 +59,7 @@ const Skill = () => {
           <div
             key={index}
             onClick={() => setActiveCard(index)}
-            className={`border-2 p-4 text-center w-full h-[200px] rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer ${
+            className={`border-2 p-4 text-center w-full  shadow-btnColor/20 h-[200px] rounded-xl shadow-lg hover:shadow-xl hover:shadow-btnColor transition-shadow duration-300 cursor-pointer ${
               activeCard === index ? "bg-btnColor text-white" : "bg-white"
             }`}
           >

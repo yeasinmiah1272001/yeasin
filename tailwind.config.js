@@ -7,6 +7,9 @@ export default {
       // backgroundImage: {
       //   "main-bg": "url('/bg-img.jpeg')",
       // },
+      animation: {
+        "spin-slow": "spin 10s linear infinite", // Slow spin animation
+      },
       fontFamily: {
         bodyFont: "Poppins, sans-serif",
       },
