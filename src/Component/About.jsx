@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import img from "../assets/b.webp";
+import img from "../assets/dev.jpg";
 import cv from "../../public/yeasin.pdf";
 
 const About = () => {
@@ -21,7 +21,7 @@ const About = () => {
           // style={{
           //   clipPath: "polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)",
           // }}
-          className="w-[250px] h-[250px] sm:w-[300px]  sm:h-[300px] lg:w-[400px] lg:h-[400px] flex-shrink-0"
+          className="w-[250px] h-[250px] sm:w-[300px] border-2 border-btnColor sm:h-[300px] lg:w-[400px] lg:h-[400px] flex-shrink-0"
           data-aos="fade-right" // AOS animation for image
         >
           <img
