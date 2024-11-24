@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../../public/nameLogo.png";
-import { Link } from "react-scroll"; // Import react-scroll
+import { Link } from "react-scroll";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
